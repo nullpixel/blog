@@ -12,8 +12,8 @@ dl, dd, ol, ul, figure {
  */
 body {
   font: 400 17px/1.5 -apple-system-font, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #111;
-  background-color: #fdfdfd;
+  color: #333;
+  background-color: #fff;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;
@@ -91,7 +91,7 @@ a {
   a:visited {
     color: #1d508f; }
   a:hover {
-    color: #111;
+    color: #333;
     text-decoration: underline; }
 
 /**
@@ -167,8 +167,15 @@ pre {
  * Site header
  */
 .site-header {
-  min-height: 56px;
-  background-color: #111;
+  min-height: 48px;
+  background: #333;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
   position: relative; }
 
 .site-title {
@@ -182,7 +189,11 @@ pre {
 
 .site-nav {
   float: right;
-  line-height: 56px; }
+  line-height: 56px;
+  font-size: 14px; }
+  .site-nav a:hover {
+    opacity: 0.65;
+    text-decoration: none; }
   .site-nav .page-link {
     color: #fff;
     line-height: 1.5; }
@@ -238,7 +249,7 @@ pre {
   color: #828282; }
 
 .post-link, .post-link:visited {
-  color: #111; }
+  color: #333; }
 .post-link:hover {
   color: #2568ba; }
 
