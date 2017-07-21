@@ -2,25 +2,25 @@ language: ruby
 sudo: false
 cache: bundler
 rvm:
-  - 2.3.3
+- 2.3.3
 env:
   global:
-    - secure: ""
+  - secure: gpiS2H3xYkUMAcrBLxM1u9u/L1bnI7jRUOudGZ/mX37BWAaqnVbsX26nzLkzcw9op0s/T7gQlFG3t4I+3QAibrbyCdUdiWrRtkhKGZhQxnR9q0PWPeg1H7JzIa+Qu/NW3uk25fivrh3lkGJr/GCnU8hqh9UMJUdVgzQqS1H52kaqpB1nhxw/+aBn0omJJCaXlOThNcI7mkWu6U48JQEqhac0i48fnUGcc9l152bhNDMNpGS4HjRh32we53DAs6B4GRwJJM3+5KSvjXVgqr+uYgrOLqoNAol3GnE6cHnZ6qMZYHWi70J+YBXxT0+dwRv+iqUYmqt+1CmSeIVSa3lBLseuODBqrv10MuzBwddoufvHf19rJEcLNvGL2njYvaluUQ6ajuYqOau8zlSWi+cefyGWhE//tv3qTUPn+PcJjmW2EfVJ1NCmZdY0vv/2BBySjl+4LqWM6Dt/1WBUYJoPO7Vap90dCZFzF6ypBXQj+mTJjKTjFW1UlqI/FmcwoVw9kTWQzAIRxTWwmYgY54puPYHs7m8xwUYBbtLr5KwIjXpT5bjyRxMqdxQ89fGxE5NuTtRkFu3PTAkhqtPlnLCZNueP+BbpBsnI6RUteAP85oaBt1MMHAWi4k8+S/9zc1lSwD4FqsthnKjeFebn5acVBafMT/siGHAYARXxj7Avluw=
 before_install:
-  - gem update --system
-  - gem update --remote bundler
+- gem update --system
+- gem update --remote bundler
 before_script:
-  - git config --global user.name "$(git --no-pager show --no-patch --format='%an')"
-  - git config --global user.email "$(git --no-pager show --no-patch --format='%ae')"
+- git config --global user.name "$(git --no-pager show --no-patch --format='%an')"
+- git config --global user.email "$(git --no-pager show --no-patch --format='%ae')"
 script:
-  - git clone -b gh-pages --depth 1 "https://${TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" _site >/dev/null 2>&1
-  - rm -rf _site/*
-  - bundle exec jekyll build
+- git clone -b gh-pages --depth 1 "https://${TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" _site >/dev/null 2>&1
+- rm -rf _site/*
+- bundle exec jekyll build
 after_success:
-  - cd _site
-  - git add -A
-  - git commit -m "Updated to $(git rev-parse --short $TRAVIS_COMMIT) at $(date -u +'%Y-%m-%d %H:%M:%S %Z')"
-  - git push "https://${TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" gh-pages >/dev/null 2>&1
+- cd _site
+- git add -A
+- git commit -m "Updated to $(git rev-parse --short $TRAVIS_COMMIT) at $(date -u +'%Y-%m-%d %H:%M:%S %Z')"
+- git push "https://${TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" gh-pages >/dev/null 2>&1
 branches:
   only:
-    - master
+  - master
