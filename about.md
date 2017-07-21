@@ -5,7 +5,7 @@ permalink: /about/
 ---
 Well, hello there. I'm nullpixel, and I make iOS apps. I do web apps too. 
 
-## About me
+## Who are you?
 
 Why would you care? I don't know, but either way, I'm going to tell you. I started iOS development way back in 2012/2013 - where I made my first app in Objective C. I loved the experience, and I continued developing. 
 
