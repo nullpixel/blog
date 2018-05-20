@@ -13,7 +13,7 @@ I joined the /r/jailbreak community when I got my first iOS device - an iPod Tou
 
 ## Projects
 
-* [Place 2.0](https://place.dynastic.co): when reddit decided to make /r/place as their 2017 April Fools prank, it was very saddening when they stopped it - it proved humans could interact at scale. That's why the team @ [dynastic](https://dynastic.co) decided to recreate it. It's fully opensource on [github](https://github.com/dynasticdevelop/place)
+* [canvas.place](https://canvas.place): when reddit decided to make /r/place as their 2017 April Fools prank, it was very saddening when they stopped it - it proved humans could interact at scale. That's why the team @ [dynastic](https://dynastic.co) decided to recreate it. It's fully opensource on [github](https://github.com/dynastic/place)
 
 * [TSS Saver iOS](https://repo.nullpixel.uk/depiction/co.dynastic.tsssaver/): an iOS app for 1conans TSSSaver.
 
